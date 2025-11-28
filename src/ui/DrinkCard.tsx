@@ -81,7 +81,7 @@ const DrinkCard = ({
               <button
                 type="button"
                 onClick={() => setFlipped(false)}
-                className="absolute top-6 right-6 text-3xl cursor-pointer"
+                className="absolute top-2 right-4 md:top-4 md:right-6 text-xl md:text-3xl cursor-pointer"
               >
                 ×
               </button>
@@ -89,7 +89,7 @@ const DrinkCard = ({
               {/* Header */}
               <div className="text-center h-[20%]">
                 <h2 className="text-3xl md:text-4xl mb-2 flex items-center justify-center gap-3 mx-auto">
-                  {name} <span className="text-4xl">🍹</span>
+                  {name} <span className="hidden md:block text-4xl">🍹</span>
                 </h2>
                 <div
                   className={`w-24 h-px bg-linear-to-r from-transparent to-transparent bg-white/30 mx-auto mb-12`}

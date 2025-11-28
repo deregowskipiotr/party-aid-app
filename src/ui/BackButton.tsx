@@ -17,9 +17,9 @@ interface BackButtonProps extends React.HTMLAttributes<HTMLDivElement> {
 const BackButton = forwardRef<HTMLDivElement, BackButtonProps>(function BackButton(
   {
     to,
-    containerClassName = "max-w-md",
+    containerClassName = "md:max-w-md",
     buttonClassName =
-      "px-6 py-3 h-12 rounded-md backdrop-blur-sm border border-white/20 text-white/80 font-medium cursor-pointer transition duration-300 ease-out hover:backdrop-blur-md hover:border-white/30 flex items-center",
+      "px-10 md:px-6 h-12 rounded-md backdrop-blur-sm border border-white/20 text-white/80 font-medium cursor-pointer transition duration-300 ease-out hover:backdrop-blur-md hover:border-white/30 flex items-center",
     className,
     buttonProps,
     ...rest
@@ -66,9 +66,9 @@ const BackButton = forwardRef<HTMLDivElement, BackButtonProps>(function BackButt
         {...(buttonProps as unknown as React.ComponentProps<typeof motion.button>)}
       >
         {/* Left arrow SVG */}
-        <img src={Icon} alt="Left Arrow" className="w-8 h-8 mr-5" />
+        <img src={Icon} alt="Left Arrow" className="w-6 h-6 md:w-8 md:h-8h-8 mr-5" />
 
-        <span>{buttonText}</span>
+        <span className="text-sm md:text-md md:pt-1">{buttonText}</span>
       </motion.button>
     </motion.div>
   );
