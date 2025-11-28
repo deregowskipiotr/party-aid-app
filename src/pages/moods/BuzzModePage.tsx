@@ -1,0 +1,49 @@
+import {  buzzModeButtons, buzzModeRouteMap } from "../../constants";
+import BackButton from "../../ui/BackButton";
+import MoodButtons from "../../ui/MoodButtons";
+import { motion } from "framer-motion";
+
+
+
+const BuzzModePage = () => {
+  return (
+    <section className="min-h-screen flex flex-col items-center justify-start px-4 md:px-6 py-16 md:py-20 text-center font-main">
+      <div className="h-[60%] md:h-[40%]">
+        <h1 className="text-5xl font-bold mb-14 text-white/80">
+          Barten<span className="text-indigo-400">Day</span> HQ
+        </h1>
+
+        <motion.p
+          className="text-lg text-gray-400 md:max-w-4xl w-full mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Hey buzz buddy, I see those eyes lighting up already! You're ready for
+          that perfect energy kick, right? Let me pour you something that'll
+          make your night hum just right.
+        </motion.p>
+
+        <motion.p
+          className="text-3xl text-indigo-400 md:max-w-4xl w-full mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Feel the buzz? Grab one and electrify your night!
+        </motion.p>
+      </div>
+
+      {/* Wrapper for MoodButtons + BackButton alignment */}
+      <div className="w-full max-w-6xl flex flex-col gap-10 items-end">
+        {/* Category buttons */}
+        <MoodButtons buttons={buzzModeButtons} routeMap={buzzModeRouteMap} />
+
+        {/* BackButton aligned to right edge, below buttons */}
+        <BackButton />
+      </div>
+    </section>
+  );
+};
+
+export default BuzzModePage;

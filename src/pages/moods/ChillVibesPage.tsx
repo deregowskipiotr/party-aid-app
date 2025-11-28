@@ -1,0 +1,53 @@
+import { chillVibesButtons, chillVibesRouteMap } from "../../constants";
+import BackButton from "../../ui/BackButton";
+import MoodButtons from "../../ui/MoodButtons";
+//import DrinkCard from "../../ui/DrinkCard"; // create this as reusable card component
+import { motion } from "framer-motion";
+
+
+const ChillVibesPage = () => {
+  
+
+  return (
+    <section className="min-h-screen flex flex-col items-center justify-start px-4 md:px-6 py-16 md:py-20 text-center font-main">
+      <div className="h-[60%] md:h-[40%]">
+        <h1 className="text-5xl font-bold mb-14 text-white/80">
+          Barten<span className="text-indigo-400">Day</span> HQ
+        </h1>
+
+        <motion.p
+          className="text-lg text-gray-400 md:max-w-4xl w-full mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Ouu you chose Chill Vibes mood, ok now I see, You are — relaxed and
+          ready for a smooth evening full of mellow sensations!
+        </motion.p>
+
+        <motion.p
+          className="text-3xl text-indigo-400 md:max-w-4xl w-full mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          Which set captivated you? Pick one and let me craft a cocktail!
+        </motion.p>
+      </div>
+
+      {/* Wrapper for MoodButtons + BackButton alignment */}
+      <div className="w-full max-w-6xl flex flex-col gap-10 items-end">
+        {/* Category buttons */}
+        <MoodButtons
+          buttons={chillVibesButtons}
+          routeMap={chillVibesRouteMap}
+        />
+
+        {/* BackButton aligned to right edge, below buttons */}
+        <BackButton />
+      </div>
+    </section>
+  );
+};
+
+export default ChillVibesPage;
