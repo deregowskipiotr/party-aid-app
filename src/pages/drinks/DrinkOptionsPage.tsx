@@ -23,13 +23,13 @@ const DrinkOptionsPage = () => {
   console.log({ mood, category, realCategory, drinks });
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-start px-4 md:px-6 py-16 md:py-20 text-center font-main">
-      <div className="h-[60%] md:h-[40%]">
+    <section className="min-h-screen flex flex-col items-center justify-start px-4 md:px-6 py-8 md:py-20 text-center font-main">
+      <div className="w-full md:h-[40%]">
         <h1 className="text-4xl md:text-5xl font-bold text-white/80 mb-6">
           Barten<span className="text-indigo-400">Day</span> HQ
         </h1>
         <motion.p
-          className="text-lg text-gray-400 mb-8"
+          className="text-md md:text-lg text-gray-400 mb-8 mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
