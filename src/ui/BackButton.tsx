@@ -43,9 +43,22 @@ const BackButton = forwardRef<HTMLDivElement, BackButtonProps>(function BackButt
   };
 
   // Dynamic button text based on context
-  const buttonText = mood ? `Back to ${mood.replace("-", " ")} Vibe` : "Back to Home";
+  const buttonText = mood ? (
+    <>
+      Back to{" "}
+      <span className="text-blue-400">
+        {mood.replace("-", " ").toUpperCase()}
+      </span>{" "}
+      Page
+    </>
+  ) : (
+    <>
+      Back to <span className="text-blue-400">HOME</span>
+    </>
+  );
 
   const outerClasses = `${containerClassName} ${className ?? ""}`.trim();
+
 
   return (
     <motion.div

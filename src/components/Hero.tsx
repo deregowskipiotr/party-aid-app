@@ -45,7 +45,7 @@ const HeroSection = () => {
         </motion.h1>
 
         <motion.p
-          className="text-lg text-gray-400 md:max-w-4xl w-full mb-8 mx-auto"
+          className=" text-md md:text-lg text-gray-400 md:max-w-4xl w-full mb-8 mx-auto font-light"
           variants={paragraphVariants}
           initial="hidden"
           animate="visible"

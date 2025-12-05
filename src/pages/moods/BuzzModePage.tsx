@@ -9,12 +9,12 @@ const BuzzModePage = () => {
   return (
     <section className="min-h-screen flex flex-col items-center justify-start px-4 md:px-6 py-16 md:py-20 text-center font-main">
       <div className="h-[60%] md:h-[40%]">
-        <h1 className="text-4xl md:text-5xl font-bold mb-14 text-white/80">
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 md:mb-14 text-white/80">
           Barten<span className="text-indigo-400">Day</span> HQ
         </h1>
 
         <motion.p
-          className="text-lg text-gray-400 md:max-w-4xl w-full mb-8"
+          className=" text-md md:text-lg text-gray-400 md:max-w-4xl w-full mb-8 font-light"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
