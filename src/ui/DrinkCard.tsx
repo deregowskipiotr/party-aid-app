@@ -67,21 +67,22 @@ const DrinkCard = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+            transition={{ duration: 0.8, ease: "easeInOut", type: "spring" }}
             onClick={() => setFlipped(false)}
           >
             <motion.div
-              className={`w-full max-w-3xl md:h-[650px] h-[85vh] overflow-y-auto rounded-md p-8 ${bgColor} backdrop-blur-xl border-2 border-white/20 shadow-2xl`}
-              initial={{ scale: 0.7, opacity: 0, y: 50 }}
-              animate={{ scale: 1, opacity: 1, y: 0 }}
-              exit={{ scale: 0.7, opacity: 0, y: 50 }}
-              transition={{ duration: 0.5, ease: "easeInOut", type: "spring" }}
+              className={`relative w-full max-w-3xl md:h-[650px] h-[85vh] overflow-y-auto rounded-md p-8 ${bgColor} backdrop-blur-xl border-2 border-white/20 shadow-2xl`}
+              initial={{  opacity: 0, y: 20 }}
+              animate={{  opacity: 1, y: 0 }}
+              exit={{  opacity: 0, y: 20 }}
+              transition={{ duration: 0.8, ease: "easeInOut", type: "spring" }}
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close button */}
               <button
                 type="button"
                 onClick={() => setFlipped(false)}
-                className="absolute top-2 right-4 md:top-4 md:right-6 text-xl md:text-3xl cursor-pointer"
+                className="absolute top-3 right-4 md:top-4 md:right-6 text-xl md:text-3xl cursor-pointer z-10"
               >
                 ×
               </button>
